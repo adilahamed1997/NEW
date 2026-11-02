@@ -1,8 +1,8 @@
 /* Store contact settings edited in the local DIGITAL CITY admin panel. */
 window.DC_CONFIG = Object.freeze({
-    "whatsappNumber": "",
+    "whatsappNumber": "94742341155",
     "businessEmail": "",
-    "phoneNumber": "",
-    "openingHours": "",
+    "phoneNumber": "+94 74 2341155",
+    "openingHours": "Monday to Sunday, 08:00 am – 06:00 pm",
     "location": ""
 });

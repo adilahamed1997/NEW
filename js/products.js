@@ -46,7 +46,7 @@ window.DC_CATEGORIES = [
         "id": "ram",
         "title": "RAM & Memory",
         "file": "ram.html",
-        "image": "images/categories/memory.svg",
+        "image": "images/ram/hsp-mouse.jpg",
         "description": "Memory upgrade options. Confirm the exact type and compatibility before purchase."
     },
     {
@@ -503,7 +503,7 @@ window.DC_PRODUCTS = [
         "name": "Desktop memory module",
         "brand": "",
         "category": "ram",
-        "image": "images/categories/memory.svg",
+        "image": "images/ram/hsp-mouse.jpg",
         "description": "Illustrative catalog entry based on an existing project image. This is not a live inventory claim; confirm the exact model, specifications, warranty and availability with DIGITAL CITY.",
         "model": "",
         "specifications": [],
@@ -519,7 +519,7 @@ window.DC_PRODUCTS = [
         "name": "Laptop memory module",
         "brand": "",
         "category": "ram",
-        "image": "images/categories/memory.svg",
+        "image": "images/ram/lap-mouse.jpg",
         "description": "Illustrative catalog entry based on an existing project image. This is not a live inventory claim; confirm the exact model, specifications, warranty and availability with DIGITAL CITY.",
         "model": "",
         "specifications": [],
