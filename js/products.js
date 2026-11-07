@@ -15,6 +15,13 @@ window.DC_CATEGORIES = [
         "description": "Desktop computer options for home, office and custom setups."
     },
     {
+        "id": "gaming",
+        "title": "Gaming Consoles & Systems",
+        "file": "gaming.html",
+        "image": "images/gaming/ps5-playstation.jpg",
+        "description": "PlayStation consoles and gaming systems. Confirm exact models and availability."
+    },
+    {
         "id": "monitors",
         "title": "Monitors",
         "file": "monitors.html",
@@ -141,7 +148,7 @@ window.DC_PRODUCTS = [
         "specifications": [],
         "availability": "Please confirm current availability",
         "sample": true,
-        "featured": true,
+        "featured": false,
         "newArrival": false,
         "bestSeller": false,
         "sortOrder": 1
@@ -189,9 +196,9 @@ window.DC_PRODUCTS = [
         "specifications": [],
         "availability": "Please confirm current availability",
         "sample": true,
-        "featured": true,
+        "featured": false,
         "newArrival": false,
-        "bestSeller": false,
+        "bestSeller": true,
         "sortOrder": 100
     },
     {
@@ -255,7 +262,7 @@ window.DC_PRODUCTS = [
         "sample": true,
         "featured": false,
         "newArrival": false,
-        "bestSeller": false,
+        "bestSeller": true,
         "sortOrder": 300
     },
     {
@@ -1233,5 +1240,37 @@ window.DC_PRODUCTS = [
         "newArrival": false,
         "bestSeller": false,
         "sortOrder": 0
+    },
+    {
+        "id": "ps5-playstation",
+        "name": "PS5 PlayStation",
+        "brand": "Sony",
+        "category": "gaming",
+        "image": "images/gaming/ps5-playstation.jpg",
+        "description": "PlayStation 5 console example. Confirm the exact model, bundle, warranty and availability with DIGITAL CITY.",
+        "model": "",
+        "specifications": [],
+        "availability": "Please confirm current availability",
+        "sample": true,
+        "featured": true,
+        "newArrival": false,
+        "bestSeller": false,
+        "sortOrder": 1600
+    },
+    {
+        "id": "gaming-system",
+        "name": "Gaming System",
+        "brand": "",
+        "category": "gaming",
+        "image": "images/gaming/gaming-system.jpg",
+        "description": "Gaming desktop system example. Confirm the exact model, processor, graphics, memory, warranty and availability with DIGITAL CITY.",
+        "model": "",
+        "specifications": [],
+        "availability": "Please confirm current availability",
+        "sample": true,
+        "featured": true,
+        "newArrival": false,
+        "bestSeller": false,
+        "sortOrder": 1601
     }
 ];
