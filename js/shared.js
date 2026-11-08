@@ -19,4 +19,18 @@ document.querySelectorAll('[data-config-link="mailto"]').forEach(element=>{const
  const whatsappReady=/^\d{8,15}$/.test(String(cfg.whatsappNumber||''));
  document.addEventListener('click',e=>{const button=e.target.closest('[data-whatsapp-product]');if(!button)return;const p=products.find(item=>item.id===button.dataset.whatsappProduct);if(!p)return;if(!whatsappReady){e.preventDefault();const status=document.querySelector('[data-contact-status]');if(status)status.textContent='WhatsApp is not configured yet. Add the confirmed business number in js/config.js to enable product enquiries.';else window.alert('WhatsApp is not configured yet. Add the confirmed business number in js/config.js to enable product enquiries.');return}button.href='https://wa.me/'+cfg.whatsappNumber+'?text='+encodeURIComponent('Hello DIGITAL CITY, I would like to enquire about this product. Product: '+p.name+'. Please share the availability and current price.');button.target='_blank';button.rel='noopener noreferrer'});
  if(whatsappReady)document.querySelectorAll('[data-whatsapp-contact]').forEach(a=>{a.href='https://wa.me/'+cfg.whatsappNumber+'?text='+encodeURIComponent('Hello DIGITAL CITY, I would like to enquire about your products.');a.target='_blank';a.rel='noopener noreferrer';a.hidden=false});
+ // Add restrained entrance motion to content cards, including cards rendered after page load.
+ const revealSelector='.category-card, .product-card, .service-card, .split-card, .feedback-card, .contact-item, .contact-form, .detail-image, .detail-copy, .search-page > *';
+ if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -24px 0px'});
+  const watchForReveal=root=>{
+   const nodes=[];
+   if(root.nodeType===1&&root.matches(revealSelector))nodes.push(root);
+   if(root.querySelectorAll)nodes.push(...root.querySelectorAll(revealSelector));
+   nodes.forEach((node,index)=>{if(node.dataset.motionReady)return;node.dataset.motionReady='true';node.classList.add('reveal');node.style.setProperty('--reveal-delay',Math.min(index,5)*55+'ms');revealObserver.observe(node)});
+  };
+  watchForReveal(document);
+  const motionRoot=document.querySelector('main')||document.body;
+  new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)watchForReveal(node)}))).observe(motionRoot,{childList:true,subtree:true});
+ }
 })();
